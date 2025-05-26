@@ -24,7 +24,6 @@ class ListFragment : Fragment() {
     ): View {
         _binding = ListFragmentBinding.inflate(inflater, container, false)
 
-        // Clear the list and load new data
         list.clear()
         list.addAll(getListGunung())
         setupRecyclerView()
@@ -55,7 +54,6 @@ class ListFragment : Fragment() {
             }
         )
 
-        // Set up RecyclerView
         binding.rvGunung.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = gunungAdapter
